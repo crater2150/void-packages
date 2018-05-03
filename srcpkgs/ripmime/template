@@ -1,0 +1,20 @@
+# Template file for 'ripmime'
+pkgname=ripmime
+version=1.4.0.10
+revision=1
+build_style=gnu-makefile
+short_desc="Extract attachments out of a MIME encoded email package"
+maintainer='Alexander Gehrke <void@qwertyuiop.de>'
+license="BSD-3-Clause"
+homepage="https://pldaniels.com/ripmime"
+distfiles="${homepage}/${pkgname}-${version}.tar.gz"
+checksum=896115488a7b7cad3b80f2718695b0c7b7c89fc0d456b09125c37f5a5734406a
+
+do_install() {
+	vbin ripmime
+	vman ripmime.1
+}
+
+post_install() {
+	vlicense LICENSE
+}
