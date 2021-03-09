@@ -1,0 +1,17 @@
+# Template file for 'tea'
+pkgname=tea
+version=0.6.0
+revision=1
+wrksrc=tea
+build_style=go
+go_import_path="code.gitea.io/tea"
+short_desc="Official CLI for Gitea"
+maintainer="Alexander Gehrke <void@qwertyuiop.de>"
+license="MIT"
+homepage="https://gitea.com/gitea/tea"
+distfiles="https://gitea.com/gitea/tea/archive/v${version}.tar.gz"
+checksum=048e6235885bec6a45ca22fba95b163d1d64b683f2f41c9c6339aacc7541f869
+
+post_install() {
+	vlicense LICENSE
+}
