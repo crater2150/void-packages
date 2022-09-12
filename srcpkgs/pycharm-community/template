@@ -1,6 +1,6 @@
 # Template file for 'pycharm-community'
 pkgname=pycharm-community
-version=2021.2.2
+version=2022.2.1
 revision=1
 archs="x86_64"
 depends="virtual?java-environment giflib libXtst hicolor-icon-theme"
@@ -9,7 +9,7 @@ maintainer="Felix Van der Jeugt <felix.vanderjeugt@gmail.com>"
 license="Apache-2.0"
 homepage="https://www.jetbrains.org/pycharm/"
 distfiles="https://download-cf.jetbrains.com/python/${pkgname}-${version}.tar.gz"
-checksum=5be617a97ab3bd26f0453a7b1e2193c5a042eade2f712f22ded43055ec983369
+checksum=fc91b134b6899a09ce8cbdc1ebdbdcfe1c1ffb6dbe756b30b24d7ad131bf27c8
 repository=nonfree
 nopie=yes
 python_version=3
@@ -41,6 +41,11 @@ do_install() {
 	rmdir -v ${DESTDIR}/usr/lib/pycharm/lib/pty4j-native/linux/ppc64le
 	rmdir -v ${DESTDIR}/usr/lib/pycharm/lib/pty4j-native/linux/mips64el
 	rmdir -v ${DESTDIR}/usr/lib/pycharm/lib/pty4j-native/linux/aarch64
+
+	rm -vrf ${DESTDIR}/usr/lib/pycharm/plugins/cwm-plugin/quiche-native/darwin-aarch64
+	rm -vrf ${DESTDIR}/usr/lib/pycharm/plugins/cwm-plugin/quiche-native/darwin-x86-64
+	rm -vrf ${DESTDIR}/usr/lib/pycharm/plugins/cwm-plugin/quiche-native/linux-aarch64
+	rm -vrf ${DESTDIR}/usr/lib/pycharm/plugins/cwm-plugin/quiche-native/win32-x86-64
 
 	rm -vf ${DESTDIR}/usr/lib/pycharm/bin/fsnotifier
 	rm -vf ${DESTDIR}/usr/lib/pycharm/plugins/python-ce/helpers/pydev/pydevd_attach_to_process/attach_linux_x86.so
