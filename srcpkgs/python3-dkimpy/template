@@ -1,7 +1,7 @@
 # Template file for 'python3-dkimpy'
 pkgname=python3-dkimpy
-version=1.0.5
-revision=5
+version=1.1.8
+revision=1
 build_style=python3-module
 hostmakedepends="python3-setuptools"
 depends="python3-dnspython python3-authres python3-pynacl python3-aiodns"
@@ -11,7 +11,7 @@ maintainer="Alexander Gehrke <void@qwertyuiop.de>"
 license="BSD-3-Clause"
 homepage="https://launchpad.net/dkimpy"
 distfiles="${PYPI_SITE}/d/dkimpy/dkimpy-${version}.tar.gz"
-checksum=9a2420bf09af686736773153fca32a02ae11ecbe24b540c26104628959f91121
+checksum=b5f60fb47bbf5d8d762f134bcea0c388eba6b498342a682a21f1686545094b77
 replaces="python-dkimpy>=0"
 provides="python-dkimpy-${version}_${revision}"
 
